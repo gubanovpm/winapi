@@ -39,3 +39,8 @@ And after that you can delete this service:
 ```
 .\server\Release\server.exe delete
 ```
+## App mode
+If you just want to start server not as service just run
+```
+.\server\Release\server.exe app
+```

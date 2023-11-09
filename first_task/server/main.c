@@ -26,9 +26,14 @@ int main(int argc, TCHAR *argv[]) {
     } else if (lstrcmpi(argv[1], TEXT("delete")) == 0) {
       SvcRemove();
       return 0;
+    } else if (lstrcmpi(argv[1], TEXT("app")) == 0) {
+      for (;;) 
+        WorkWithClient();
     } else {
-      printf("Usage error: I know two arguments \"install\" and \"delete\"\n");
+      printf("Usage error: I know 3 arguments \n\t\"install\"\n\t\"delete\"\n\t\"app\"\n");
+      return -1;
     }
+
   }
 
   SERVICE_TABLE_ENTRY DispatchTable[] = {
